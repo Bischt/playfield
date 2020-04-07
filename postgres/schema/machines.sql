@@ -6,7 +6,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('"8 Ball"', '', 'Williams Manufacturing Company', 'February, 1952', 1, 'EM', 'Billiards', 'http://ipdb.org/machine.cgi?gid=765');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values (''Regatta'', '', 'Exhibit Supply Company', 'October, 1938', 1, 'EM', 'Adventure - Boats - Nautical - Recreation - Sailing - Water', 'http://ipdb.org/machine.cgi?gid=4671');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('"Regatta"', '', 'Exhibit Supply Company', 'October, 1938', 1, 'EM', 'Adventure - Boats - Nautical - Recreation - Sailing - Water', 'http://ipdb.org/machine.cgi?gid=4671');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('007-Flipper', '', 'VEB Luckenwalder Metallwarenfabrik', '', 2, 'EM', 'Sports', 'http://ipdb.org/machine.cgi?gid=5443');
 
