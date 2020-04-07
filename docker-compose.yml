@@ -17,3 +17,12 @@ services:
     restart: always
     ports:
       - "80:80"
+
+  postgres:
+    build: ./postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: change_me
+      POSTGRES_DB: playfield

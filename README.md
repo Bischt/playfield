@@ -12,6 +12,15 @@ Design:
 Flask app fronted by Nginx (uWSGI) and a database to store information.
 Intended to be deployed via Docker Compose
 
+API
+---
+| Field          | Description  |
+| :------------- | :----------: |
+| /machine/all_machines    | List all machines currently added |
+| /machine/machine_by_name | List details of specific machine  |
+| /player/all_players      | List all players currently added  |
+| /player/player_by_name   | Lookup player by name             |
+
 Run Locally:
 ------------
 1.  cd to flask directory

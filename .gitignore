@@ -3,3 +3,4 @@ venv/
 flask/app/__pycache__/
 flask/app/instance/
 flask/app/env/
+flask/__pycache__/
