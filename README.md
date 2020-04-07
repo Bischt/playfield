@@ -14,12 +14,14 @@ Intended to be deployed via Docker Compose
 
 API
 ---
-| Field          | Description  |
-| :------------- | :----------: |
-| /machine/all_machines    | List all machines currently added |
-| /machine/machine_by_name | List details of specific machine  |
-| /player/all_players      | List all players currently added  |
-| /player/player_by_name   | Lookup player by name             |
+|Class       | Parameters | HTTP Request   | Description  |
+| :--------- |:---------| :------------- | :----------: |
+| machine | None         | **GET** /machine/all_machines             | List all machines currently added     |
+| machine | machine_name | **POST** /machine/machine_by_name         | Get machines with provided name       |
+| machine | abbreviation | **POST** /machine/machine_by_abbr         | Get machines with specific abbr       |
+| machine | manufacturer | **POST** /machine/machine_by_manufacturer | Get machines by provided manufacturer |
+| player  | None         | **GET** /player/all_players               | List all players currently added      |
+| player  | player_name  | **POST** /player/player_by_name           | Lookup player by name                 |
 
 Run Locally:
 ------------
