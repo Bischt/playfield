@@ -1,6 +1,6 @@
 drop table if exists player;
 create table player (
-  pid SERIAL primary key not null,
+  player_id SERIAL primary key not null,
   nick varchar(255),
   name varchar(255),
   email varchar(255),
@@ -17,31 +17,9 @@ create table player (
   activeevents integer
 );
 
-drop table if exists game;
-create table game (
-  gid SERIAL primary key not null,
-  lid integer,
-  mid integer,
-  name varchar(255) not null,
-  condition text,
-  notes text,
-  active boolean
-);
-
-drop table if exists location;
-create table location (
-  lid SERIAL primary key not null,
-  name varchar(255) not null,
-  address varchar(255),
-  addressPrivate boolean,
-  notes text,
-  locType integer,
-  active boolean
-);
-
 drop table if exists machines;
 create table machines (
-  mid SERIAL primary key not null,
+  machine_id SERIAL primary key not null,
   name varchar(255) not null,
   abbr varchar(50),
   manufacturer varchar(150),
@@ -52,71 +30,78 @@ create table machines (
   ipdbURL varchar(150)
 );
 
+drop table if exists locations;
+create table locations (
+  location_id SERIAL primary key not null,
+  name varchar(255) not null,
+  address varchar(255),
+  addressPrivate boolean,
+  notes text,
+  locType integer,
+  active boolean
+);
+
+drop table if exists locations_machines;
+create table locations_machines (
+  game_id SERIAL primary key not null,
+  location_id integer not null,
+  machine_id integer not null,
+  name varchar(255) not null,
+  condition text,
+  notes text,
+  active boolean
+);
+
+drop table if exists league;
+create table league (
+  league_id SERIAL primary key not null,
+  name varchar(255)
+);
+
+drop table if exists league_players;
+create table league_players (
+  league_id integer not null,
+  player_id integer not null
+);
+
 drop table if exists season;
 create table season (
-  sid SERIAL primary key not null,
-  timestamp timestamp not null default CURRENT_TIMESTAMP,
-  seasonLength integer not null,
-  numToDrop integer not null,
-  numOfRounds integer not null,
-  gamesPerRound integer not null, 
-  scoring varchar(150) not null,
-  seeding varchar(150) not null,
-  playerOrder varchar(150) not null,
-  machineDrawing varchar(150) not null,
-  dues double precision default 0.00,
-  running boolean not null default False,
-  historical boolean not null default False,
-  active boolean not null default True
+  season_id SERIAL primary key not null,
+  league_id integer not null,
+  series_id integer,
+  name varchar(255)
 );
 
-drop table if exists config;
-create table config (
-  cid integer primary key not null,
-  leagueName varchar(255),
-  welcomeText text
-);
-insert into config (cid, leagueName, welcomeText) values (1, '', '');
-
-drop table if exists posts;
-create table posts (
-  pid SERIAL primary key not null,
-  timestamp timestamp not null default CURRENT_TIMESTAMP,
-  title varchar(255) not null,
-  content text not null,
-  active boolean not null default True
+drop table if exists tournament;
+create table tournament (
+  tournament_id SERIAL primary key not null,
+  location_id integer,
+  name varchar(255)
 );
 
----------------------------------------------------------
--- Test tables for league scoring/team matching/voting --
----------------------------------------------------------
-drop table if exists sessions;
-create table sessions (
-  season_id integer primary key not null,
-  session_id integer not null,
-  lid integer
-  
+drop table if exists tournament_players;
+create table tournament_players (
+  tournament_id integer not null,
+  player_id integer not null
 );
 
-drop table if exists scores;
-create table scores (
-  score_id SERIAL primary key not null,
-  session_id integer,
-  pid integer,
-  gid integer,
-  score bigint
+drop table if exists tournament_series;
+create table tournament_series (
+  tournament_id integer not null,
+  series_id integer not null
 );
 
-drop table if exists teams;
-create table teams (
-  t_id integer,
-  pid integer
+drop table if exists match;
+create table match (
+  match_id SERIAL primary key not null,
+  tournament_id integer not null,
+  machine_id integer not null,
+  name varchar(255)
 );
 
-drop table if exists voting;
-create table voting ( 
-  gid integer,
-  pid integer,
-  vote boolean
+drop table if exists match_players;
+create table match_players (
+  match_id integer not null,
+  player_id integer not null,
+  score varchar(255)
 );
-

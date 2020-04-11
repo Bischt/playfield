@@ -10,7 +10,7 @@ class AllMachines(Resource):
     @staticmethod
     def get():
         query = "SELECT * FROM machines LIMIT 10;"
-        entries = _query_db(query)
+        entries = _read_db(query)
         return jsonify(entries)
 
 
@@ -18,12 +18,26 @@ class AllPlayers(Resource):
 
     @staticmethod
     def get():
-        query = "SELECT * FROM players LIMIT 10;"
-        entries = _query_db(query)
+        query = "SELECT * FROM players;"
+        entries = _read_db(query)
         return jsonify(entries)
 
 
-def _query_db(query):
+class AllLocations(Resource):
+
+    @staticmethod
+    def get():
+        query = "SELECT * FROM locations;"
+        entries = _read_db(query)
+        return jsonify(entries)
+
+
+def _read_db(query):
+    """
+    Fetch data from the db
+    :param query:
+    :return:
+    """
     # Create connection and cursor
     connection = _connect_db()
     dict_cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -39,6 +53,10 @@ def _query_db(query):
 
 
 def _connect_db():
+    """
+    Establish db connection for read operations
+    :return:
+    """
     try:
         conn_string = "dbname=%s user=%s host=%s password=%s" % (os.environ['DB_NAME'],
                                                                  os.environ['DB_USER'],

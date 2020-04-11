@@ -1,0 +1,131 @@
+digraph models_diagram{
+    graph[rankdir=LR, overlap=false, splines=true];
+    node [shape=record, fontsize=9, fontname="Verdana"];
+    edge [style=dashed];
+  machines [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Machines</td></tr>
+        <tr><td port="0" align="left"><b>machine_id: SERIAL</b></td></tr>
+        <tr><td port="2" align="left">name: varchar(255)</td></tr>
+        <tr><td port="3" align="left">abbr: varchar(50)</td></tr>
+        <tr><td port="4" align="left">manufacturer: varchar(150)</td></tr>
+        <tr><td port="5" align="left">manDate: varchar(100)</td></tr>
+        <tr><td port="6" align="left">players: varchar(2)</td></tr>
+        <tr><td port="7" align="left">gameType: varchar(5)</td></tr>
+        <tr><td port="8" align="left">theme: varchar(150)</td></tr>
+        <tr><td port="9" align="left">ipdbURL: varchar(150)</td></tr>
+    </table>>];
+  players [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Players</td></tr>
+        <tr><td port="0" align="left"><b>player_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left">nick: varchar(255)</td></tr>
+        <tr><td port="2" align="left">name: varchar(255)</td></tr>
+        <tr><td port="3" align="left">email: varchar(255)</td></tr>
+        <tr><td port="4" align="left">phone: varchar(25)</td></tr>
+        <tr><td port="5" align="left">location: varchar(255)</td></tr>
+        <tr><td port="6" align="left">ifpanumber: varchar(10)</td></tr>
+        <tr><td port="7" align="left">pinside: varchar(30)</td></tr>
+        <tr><td port="8" align="left">notes: text</td></tr>
+        <tr><td port="9" align="left">status: integer</td></tr>
+        <tr><td port="10" align="left">active: boolean</td></tr>
+        <tr><td port="11" align="left">currentrank: integer</td></tr>
+        <tr><td port="12" align="left">currentwpprvalue: double precision</td></tr>
+        <tr><td port="13" align="left">bestfinish: integer</td></tr>
+        <tr><td port="14" align="left">activeevents: integer</td></tr>
+    </table>>];
+  locations [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Locations</td></tr>
+        <tr><td port="0" align="left"><b>location_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left">name: varchar(255)</td></tr>
+        <tr><td port="2" align="left">address: varchar(255)</td></tr>
+        <tr><td port="3" align="left">addressPrivate: boolean</td></tr>
+        <tr><td port="4" align="left">notes: text</td></tr>
+        <tr><td port="5" align="left">locType: integer</td></tr>
+        <tr><td port="6" align="left">active: boolean</td></tr>
+    </table>>];
+  locations_machines [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Locations_Machines</td></tr>
+        <tr><td port="0" align="left"><b>game_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left"><i>location_id: integer</i></td></tr>
+        <tr><td port="2" align="left"><i>machine_id: integer</i></td></tr>
+        <tr><td port="3" align="left">name: varchar(255)</td></tr>
+        <tr><td port="4" align="left">condition: text</td></tr>
+        <tr><td port="5" align="left">notes: text</td></tr>
+        <tr><td port="6" align="left">active: boolean</td></tr>
+    </table>>];
+  league [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">League</td></tr>
+        <tr><td port="0" align="left"><b>league_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left">name: varchar(255)</td></tr>
+    </table>>];
+  league_players [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">League_Players</td></tr>
+        <tr><td port="0" align="left"><i>league_id integer</i></td></tr>
+        <tr><td port="1" align="left"><i>player_id integer</i></td></tr>
+    </table>>];
+  tournament [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Tournament</td></tr>
+        <tr><td port="0" align="left"><b>tournament_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left"><i>location_id: integer</i></td></tr>
+        <tr><td port="2" align="left">name: varchar(255)</td></tr>
+    </table>>];
+  tournament_series [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Tournament_Series</td></tr>
+        <tr><td port="0" align="left"><i>tournament_id: integer</i></td></tr>
+        <tr><td port="1" align="left"><i>series_id: integer</i></td></tr>
+    </table>>];
+  tournament_players [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Tournament_Players</td></tr>
+        <tr><td port="0" align="left"><i>tournament_id: integer</i></td></tr>
+        <tr><td port="1" align="left"><i>player_id: integer</i></td></tr>
+    </table>>];
+  season [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Season</td></tr>
+        <tr><td port="0" align="left"><b>season_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left"><i>league_id: integer</i></td></tr>
+        <tr><td port="2" align="left"><i>series_id: integer</i></td></tr>
+        <tr><td port="3" align="left">name: varchar(255)</td></tr>
+    </table>>];
+  match [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Match</td></tr>
+        <tr><td port="0" align="left"><b>match_id: SERIAL</b></td></tr>
+        <tr><td port="1" align="left"><i>tournament_id: integer</i></td></tr>
+        <tr><td port="2" align="left"><i>machine_id: integer</i></td></tr>
+        <tr><td port="3" align="left">name: varchar(255)</td></tr>
+    </table>>];
+  match_players [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Match_Players</td></tr>
+        <tr><td port="0" align="left"><i>match_id: integer</i></td></tr>
+        <tr><td port="1" align="left"><i>player_id: integer</i></td></tr>
+        <tr><td port="1" align="left"><i>score: varchar(15)</i></td></tr>
+    </table>>];
+  
+  
+  
+  
+  locations:0 -> locations_machines:1;
+  machines:0 -> locations_machines:2;
+  league:0 -> league_players:0;
+  league:0 -> season:1;
+  players:0 -> league_players:1;
+  tournament:1 -> locations:0;
+  tournament:0 -> tournament_series:0;
+  tournament:0 -> tournament_players:0;
+  players:0 -> tournament_players:1;
+  season:2 -> tournament_series:1;
+  match:0 ->match_players:0;
+  match:1 -> tournament:0;
+  match:2 -> machines:0;
+  match_players:1 -> players:0;
+}

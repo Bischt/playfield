@@ -11,6 +11,7 @@ api = Api(app)
 # Add API endpoints
 api.add_resource(read.AllMachines, '/api/v1/resources/machine/all_machines')
 api.add_resource(read.AllPlayers, '/api/v1/resources/player/all_players')
+api.add_resource(read.AllLocations, '/api/v1/resources/location/all_locations')
 
 
 # Define general non API endpoints

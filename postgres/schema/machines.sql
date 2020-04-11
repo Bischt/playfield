@@ -4118,9 +4118,9 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit', '', 'Genco Manufacturing Company', 'May, 1938', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1192');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit 'N' Run', '', 'D. Gottlieb & Company', 'March, 1952', 1, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=1195');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit ''N'' Run', '', 'D. Gottlieb & Company', 'March, 1952', 1, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=1195');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit 'N' Run', '', 'Daval Mfg Company Incorporated, G.B.', 'April, 1937', 1, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=3149');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit ''N'' Run', '', 'Daval Mfg Company Incorporated, G.B.', 'April, 1937', 1, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=3149');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Hit and Run Base-Ball', '', 'Williams Electronics, Incorporated', 'March, 1970', 2, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=1193');
 
@@ -4814,7 +4814,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Krull II', '', 'Mylstar Electronics, Incorporated', '', 4, 'SS', 'Fantasy', 'http://ipdb.org/machine.cgi?gid=5338');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Kuwait', '', 'Maquinas Recreativas Sociedad Anonima', '', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=5804');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Kuwait', '', 'Maquinas Recreativas Sociedad Anonima', '', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=5804');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('KZ-26', '', 'Playmatic', '1984', 4, 'SS', 'Outer Space - Fantasy', 'http://ipdb.org/machine.cgi?gid=3202');
 
@@ -5702,7 +5702,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Moulin Rouge', '', 'Williams Electronic Manufacturing Company', 'May 26, 1965', 1, 'EM', 'Adventure - Foreign Peoples', 'http://ipdb.org/machine.cgi?gid=1634');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Mousin' Around!', '', 'Midway Manufacturing Company, a subsidiary of WMS Industries, Incorporated', 'December, 1989', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=1635');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Mousin'' Around!', '', 'Midway Manufacturing Company, a subsidiary of WMS Industries, Incorporated', 'December, 1989', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=1635');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Movie', '', 'Bell Games', '', 4, 'SS', 'Movies', 'http://ipdb.org/machine.cgi?gid=4813');
 
@@ -6426,7 +6426,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pirates of the Caribbean', 'POTC', 'Stern Pinball, Incorporated', 'July, 2006', 4, 'SS', 'Pirates - Disney - Licensed Theme', 'http://ipdb.org/machine.cgi?gid=5163');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pirates of the Caribbean At Worlds End', 'POTC3', 'Zizzle Arcade Pinball', '2007', , 'SS', 'Licensed Theme - Pirates - Historical', 'http://ipdb.org/machine.cgi?gid=5645');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pirates of the Caribbean At Worlds End', 'POTC3', 'Zizzle Arcade Pinball', '2007', 1, 'SS', 'Licensed Theme - Pirates - Historical', 'http://ipdb.org/machine.cgi?gid=5645');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pirates of the Caribbean Dead Mans Chest', 'POTC2', 'Zizzle Arcade Pinball', '2006', 2, 'SS', 'Licensed Theme - Pirates - Historical', 'http://ipdb.org/machine.cgi?gid=5164');
 
@@ -6600,7 +6600,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Poster Girl', '', 'Talleres del Llobregat S.A. [Automaticos]', '', 1, 'EM', 'Girls - Glamour - Women', 'http://ipdb.org/machine.cgi?gid=5860');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pot 'O' Gold', '', 'Williams Electronic Manufacturing Company', 'June 30, 1965', 2, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1857');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pot ''O'' Gold', '', 'Williams Electronic Manufacturing Company', 'June 30, 1965', 2, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1857');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pot Shot', '', 'J. H. Keeney and Company Incorporated', 'January, 1939', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1856');
 
@@ -6680,7 +6680,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Push-Over', '', 'D. Gottlieb & Company', 'July, 1934', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1878');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Put 'N' Take', '', 'Western Equipment & Supply Company', 'January, 1935', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1879');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Put ''N'' Take', '', 'Western Equipment & Supply Company', 'January, 1935', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1879');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Pylon', '', 'Exhibit Supply Company', 'June, 1940', 1, 'EM', 'Airplane Racing', 'http://ipdb.org/machine.cgi?gid=1880');
 
@@ -6872,7 +6872,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Redwood', '', 'Bally Manufacturing Corporation', '1935', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=4167');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Reflex', '', 'Williams Electronics, Incorporated', 'November, 1982', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=3721');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Reflex', '', 'Williams Electronics, Incorporated', 'November, 1982', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=3721');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Regatta', '', 'Williams Manufacturing Company', 'August 05, 1955', 1, 'EM', 'Sports - Water Sports', 'http://ipdb.org/machine.cgi?gid=1939');
 
@@ -6976,7 +6976,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Road Runner', '', 'Atari, Incorporated', '1979', 2, 'SS', 'Licensed Theme', 'http://ipdb.org/machine.cgi?gid=3517');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Road Runner', '', 'D. Gottlieb & Company', 'July, 1970', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3777');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Road Runner', '', 'D. Gottlieb & Company', 'July, 1970', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3777');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Robin Hood', '', 'Daval Mfg Company Incorporated, G.B.', 'August, 1938', 1, 'EM', 'Archery', 'http://ipdb.org/machine.cgi?gid=3512');
 
@@ -7014,7 +7014,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Rock Star', '', 'D. Gottlieb & Company, a Columbia Pictures Industries Company', 'December, 1978', 1, 'EM', 'Music - Singing', 'http://ipdb.org/machine.cgi?gid=1983');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Rock-N-Roll', '', 'D. Gottlieb & Company', '1967', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3775');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Rock-N-Roll', '', 'D. Gottlieb & Company', '1967', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3775');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Rockelite', '', 'Bally Manufacturing Corporation', 'March, 1935', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=1984');
 
@@ -7112,11 +7112,11 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Roughriders', '', 'F. W. Wettzel Novelty Works', 'August, 1939', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3284');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round 'n' Round', '', 'Shyvers Manufacturing Company', 'April, 1936', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2025');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round ''n'' Round', '', 'Shyvers Manufacturing Company', 'April, 1936', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2025');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round and Round', '', 'Bally Manufacturing Corporation', '1936', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=4181');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round The World', '', 'Precision Automatics, Ltd.', '', , 'EM', 'Travel - World Places', 'http://ipdb.org/machine.cgi?gid=6208');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round The World', '', 'Precision Automatics, Ltd.', '', 1, 'EM', 'Travel - World Places', 'http://ipdb.org/machine.cgi?gid=6208');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Round Up', '', 'Bally Manufacturing Corporation', '', 2, 'EM', 'Western', 'http://ipdb.org/machine.cgi?gid=2026');
 
@@ -7138,7 +7138,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Aces', '', 'Pacific Amusement Manufacturing Company', 'May, 1937', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3791');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Bingo', '', 'Unknown Manufacturer', '', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=5246');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Bingo', '', 'Unknown Manufacturer', '', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5246');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Cards', '', 'D. Gottlieb & Company', '', 1, 'EM', 'Playing Cards', 'http://ipdb.org/machine.cgi?gid=5547');
 
@@ -7150,7 +7150,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Flippers', '', 'Jac van Ham', 'March, 1987', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=3254');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Flush', '', 'D. Gottlieb & Company', 'February, 1957', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3770');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Flush', '', 'D. Gottlieb & Company', 'February, 1957', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3770');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Royal Flush', '', 'Maquinas Recreativas Sociedad Anonima', '', 1, 'EM', 'Cards/Gambling', 'http://ipdb.org/machine.cgi?gid=4641');
 
@@ -7586,7 +7586,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sink the Japs', '', 'Victory Games', 'October, 1942', 1, 'EM', 'Wartime - Patriotic', 'http://ipdb.org/machine.cgi?gid=3829');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sir Lancelot', '', 'Peyper', '1994', , 'SS', 'Medievel Knights', 'http://ipdb.org/machine.cgi?gid=4949');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sir Lancelot', '', 'Peyper', '1994', 1, 'SS', 'Medievel Knights', 'http://ipdb.org/machine.cgi?gid=4949');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Siremar', '', 'Recreativos Invermatic', '', 1, 'EM', 'Deep Sea - Mermaids - Water - Women', 'http://ipdb.org/machine.cgi?gid=5968');
 
@@ -7618,7 +7618,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Skating', '', 'Maquinas Recreativas Sociedad Anonima', '', 1, 'EM', 'Sports - Ice Skating', 'http://ipdb.org/machine.cgi?gid=5772');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Skee Skill', '', 'Williams Electronics, Incorporated', 'June, 1973', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3725');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Skee Skill', '', 'Williams Electronics, Incorporated', 'June, 1973', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3725');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Ski Club', '', 'Williams Electronic Manufacturing Company', 'March, 1965', 1, 'EM', 'Sports - Skiing', 'http://ipdb.org/machine.cgi?gid=2172');
 
@@ -7720,7 +7720,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sky Warrior', '', 'I.D.I.', '', 4, 'SS', 'Outer Space - Fantasy', 'http://ipdb.org/machine.cgi?gid=3905');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sky-Rocket', '', 'Exhibit Supply Company', '', 1, 'EM', 'Celebration - Fireworks - Historical - World's Fair', 'http://ipdb.org/machine.cgi?gid=4004');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sky-Rocket', '', 'Exhibit Supply Company', '', 1, 'EM', 'Celebration - Fireworks - Historical - World''s Fair', 'http://ipdb.org/machine.cgi?gid=4004');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Skyhawk', '', 'Fischer, a Division of Questor Manufacturing Company', '1977', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=4699');
 
@@ -7764,7 +7764,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('SlugFest (Second Model)', '', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', '1991', 2, 'SS', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=5949');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('SlugFest (Third Model)', '', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', '', , 'SS', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=6023');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('SlugFest (Third Model)', '', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', '', 1, 'SS', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=6023');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Slugger', '', 'Midway Manufacturing Company', 'February, 1963', 1, 'EM', 'Sports - Baseball', 'http://ipdb.org/machine.cgi?gid=2210');
 
@@ -7838,7 +7838,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Solar City', '', 'D. Gottlieb & Company', 'February, 1977', 2, 'EM', 'Fantasy', 'http://ipdb.org/machine.cgi?gid=2237');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Solar City (Prototype)', '', 'D. Gottlieb & Company', '', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=4511');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Solar City (Prototype)', '', 'D. Gottlieb & Company', '', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=4511');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Solar Fire', '', 'Williams Electronics, Incorporated', 'July, 1981', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=2238');
 
@@ -8212,7 +8212,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Star Explorer', '', 'Phillips Electronics, Ltd.', '', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5771');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Star Fighter', '', 'Williams Electronics, Incorporated', 'December, 1983', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=3729');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Star Fighter', '', 'Williams Electronics, Incorporated', 'December, 1983', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=3729');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Star Fire', '', 'Playmatic', '1985', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=3453');
 
@@ -8392,7 +8392,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Strike', '', 'Zaccaria', 'September, 1978', 1, 'SS', 'Bowling', 'http://ipdb.org/machine.cgi?gid=3363');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Strike', '', 'D. Gottlieb & Company', 'July, 1957', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3772');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Strike', '', 'D. Gottlieb & Company', 'July, 1957', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3772');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Strike', '', 'Zaccaria', '1974', 1, 'EM', 'Sports - Bowling', 'http://ipdb.org/machine.cgi?gid=4507');
 
@@ -8440,7 +8440,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sultan', '', 'Taito do Brasil, a division of Taito, Japan', '', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5009');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Summer Holidays', '', 'Recel S. A.', '1975', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=4597');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Summer Holidays', '', 'Recel S. A.', '1975', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=4597');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Summer Time', '', 'United Manufacturing Company', 'September, 1948', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2414');
 
@@ -8458,7 +8458,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sun Valley', '', 'Bally Manufacturing Corporation', '', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2419');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sun Valley', '', 'D. Gottlieb & Company', 'November, 1954', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3767');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sun Valley', '', 'D. Gottlieb & Company', 'November, 1954', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3767');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Sun''s Cruise', '', 'Bigliardini Elettronici Milano', 'February, 1978', 1, 'SS', 'Boats - Nautical - Water', 'http://ipdb.org/machine.cgi?gid=5671');
 
@@ -8502,7 +8502,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Duo', '', 'D. Gottlieb & Company', 'July, 1967', 2, 'EM', 'Sports - Pinball', 'http://ipdb.org/machine.cgi?gid=2431');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Flipper', '', 'Chicago Coin Machine Manufacturing Company', '1975', 1, 'SS', 'Outer Space - UFO's - Space Aliens', 'http://ipdb.org/machine.cgi?gid=2432');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Flipper', '', 'Chicago Coin Machine Manufacturing Company', '1975', 1, 'SS', 'Outer Space - UFO''s - Space Aliens', 'http://ipdb.org/machine.cgi?gid=2432');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Flipper', '', 'Splin S.A.', '', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5870');
 
@@ -8530,7 +8530,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Orbit', '', 'D. Gottlieb & Company, a Columbia Pictures Industries Company', 'May, 1983', 4, 'SS', 'Outer Space', 'http://ipdb.org/machine.cgi?gid=2437');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Pang', '', 'Creaciones e Investigaciones Electrónicas, Sociedad Limitada', '', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=5568');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Pang', '', 'Creaciones e Investigaciones Electrónicas, Sociedad Limitada', '', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5568');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Super Par Golf', '', 'Chicago Coin Machine Manufacturing Company', '', 1, 'EM', 'Sports - Golfing', 'http://ipdb.org/machine.cgi?gid=4754');
 
@@ -8690,7 +8690,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tag-Team Pinball', '', 'NSM Lions', '1986', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=4119');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tahiti', '', 'Maquinas Recreativas Sociedad Anonima', '', , 'EM', 'Happiness - Women - World Places', 'http://ipdb.org/machine.cgi?gid=5807');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tahiti', '', 'Maquinas Recreativas Sociedad Anonima', '', 1, 'EM', 'Happiness - Women - World Places', 'http://ipdb.org/machine.cgi?gid=5807');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tahiti', '', 'Chicago Coin Machine Manufacturing Company', 'October, 1949', 1, 'EM', 'World Places - Water - Happiness - Girls - Women', 'http://ipdb.org/machine.cgi?gid=2490');
 
@@ -8874,9 +8874,9 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Circus Tiger', '', 'Unknown Manufacturer', '', 1, 'EM', 'Circus', 'http://ipdb.org/machine.cgi?gid=5215');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Crocodile Hunter Outback Adventure', '', 'The Pinball Factory', '', , 'SS', 'Licensed Theme - Adventure', 'http://ipdb.org/machine.cgi?gid=5793');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Crocodile Hunter Outback Adventure', '', 'The Pinball Factory', '', 1, 'SS', 'Licensed Theme - Adventure', 'http://ipdb.org/machine.cgi?gid=5793');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Death Dealing Adventures of Maxx Badazz Champion Kickboxer', '', 'Alvin G. and Company', '1993', , 'SS', 'Sports - Kickboxing', 'http://ipdb.org/machine.cgi?gid=4350');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Death Dealing Adventures of Maxx Badazz Champion Kickboxer', '', 'Alvin G. and Company', '1993', 1, 'SS', 'Sports - Kickboxing', 'http://ipdb.org/machine.cgi?gid=4350');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Empire Strikes Back', 'TESB', 'A. Hankin & Company', 'June, 1980', 4, 'SS', 'Licensed Theme', 'http://ipdb.org/machine.cgi?gid=2868');
 
@@ -8900,11 +8900,11 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Games I', '', 'Mylstar Electronics, Incorporated', '', 4, 'SS', 'Sports - Olympic Competition', 'http://ipdb.org/machine.cgi?gid=5340');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Getaway: High Speed II', 'HSII', 'American Home Entertainment, a division of Azrak-Hamway International, Inc.', '1993', , 'SS', 'Cops and Robbers', 'http://ipdb.org/machine.cgi?gid=5181');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Getaway: High Speed II', 'HSII', 'American Home Entertainment, a division of Azrak-Hamway International, Inc.', '1993', 1, 'SS', 'Cops and Robbers', 'http://ipdb.org/machine.cgi?gid=5181');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Getaway: High Speed II', 'HSII', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', 'February 02, 1992', 4, 'SS', 'Cops - Driving - Police - Speeding', 'http://ipdb.org/machine.cgi?gid=1000');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Godfather', '', 'Recel S. A.', '1974', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=4598');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Godfather', '', 'Recel S. A.', '1974', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=4598');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('The Godfather', '', 'Proyectos Electromecánicos de Tanteo y Color', '', 4, 'EM', '', 'http://ipdb.org/machine.cgi?gid=5931');
 
@@ -9054,13 +9054,13 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tic-Tac-Toe', '', 'Williams Electronic Manufacturing Company', 'January 10, 1959', 1, 'EM', 'Beach - Tic-Tac-Toe', 'http://ipdb.org/machine.cgi?gid=2559');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tick 'a' Lite', '', 'Stoner Manufacturing Company', 'April, 1935', 1, 'EM', 'Sports - Horse Racing', 'http://ipdb.org/machine.cgi?gid=3749');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tick ''a'' Lite', '', 'Stoner Manufacturing Company', 'April, 1935', 1, 'EM', 'Sports - Horse Racing', 'http://ipdb.org/machine.cgi?gid=3749');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Ticker', '', 'Pacific Amusement Manufacturing Company', 'October, 1934', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2558');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Ticker Tape', '', 'Bally Manufacturing Corporation', '', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3505');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Ticket Tac Toe', '', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', 'March, 1996', 1, 'SS', 'Children's Games', 'http://ipdb.org/machine.cgi?gid=4334');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Ticket Tac Toe', '', 'Williams Electronics Games, Incorporated, a subsidiary of WMS Ind., Incorporated', 'March, 1996', 1, 'SS', 'Children''s Games', 'http://ipdb.org/machine.cgi?gid=4334');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Tidal Wave', '', 'D. Gottlieb & Company, a Columbia Pictures Industries Company', '', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5326');
 
@@ -9528,7 +9528,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Udo Lindenberg', '', '', 'May 28, 2011', 4, 'SS', 'Music', 'http://ipdb.org/machine.cgi?gid=5715');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('UFO', '', 'Model Racing', '', , 'SS', 'Outer Space - Fantasy', 'http://ipdb.org/machine.cgi?gid=5314');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('UFO', '', 'Model Racing', '', 1, 'SS', 'Outer Space - Fantasy', 'http://ipdb.org/machine.cgi?gid=5314');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('UFO Electronic Pinball', '', 'Coleco Industries, Inc.', '', 1, 'EM', 'Aliens - Outer Space - UFO', 'http://ipdb.org/machine.cgi?gid=6150');
 
@@ -9582,7 +9582,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Vacation', '', 'Bally Manufacturing Corporation', 'July, 1940', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2712');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Vacation America', '', 'Churchill Cabinet', 'December, 2003', , 'SS', 'Family Vacation', 'http://ipdb.org/machine.cgi?gid=4848');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Vacation America', '', 'Churchill Cabinet', 'December, 2003', 1, 'SS', 'Family Vacation', 'http://ipdb.org/machine.cgi?gid=4848');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Vagabond', '', 'Williams Electronic Manufacturing Company', 'October 10, 1962', 1, 'EM', 'American History', 'http://ipdb.org/machine.cgi?gid=2713');
 
@@ -9678,7 +9678,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Vogue', '', 'Stoner Manufacturing Company', '1938', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3998');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Volcan', '', 'Explomatic', '', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=5731');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Volcan', '', 'Explomatic', '', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=5731');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Volcano', '', 'Taito do Brasil, a division of Taito, Japan', '', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=4578');
 
@@ -9706,7 +9706,7 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wagon Wheels', '', 'United Manufacturing Company', 'February, 1945', 1, 'EM', 'American History - American West', 'http://ipdb.org/machine.cgi?gid=2747');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Walk ''N The Ball', '', 'Pinstar', '1985', , 'SS', '', 'http://ipdb.org/machine.cgi?gid=6053');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Walk ''N The Ball', '', 'Pinstar', '1985', 1, 'SS', '', 'http://ipdb.org/machine.cgi?gid=6053');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Walkyria', '', 'Joctronic Juegos Electronicos S.A.', '', 4, 'SS', '', 'http://ipdb.org/machine.cgi?gid=5556');
 
@@ -9796,11 +9796,11 @@ INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, them
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Fire', '', 'J. H. Keeney and Company Incorporated', 'March, 1941', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2782');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Fire', '', 'D. Gottlieb & Company', 'July, 1957', , 'EM', '', 'http://ipdb.org/machine.cgi?gid=3773');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Fire', '', 'D. Gottlieb & Company', 'July, 1957', 1, 'EM', '', 'http://ipdb.org/machine.cgi?gid=3773');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Fyre', '', 'Stern Electronics, Incorporated', 'October, 1978', 4, 'SS', 'Historical - Chariot Racing - Romans', 'http://ipdb.org/machine.cgi?gid=2783');
 
-INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Horse Saloon', '', 'Data East Pinball, Incorporated', '1991', , 'SS', 'Terpsichorean Entertainment', 'http://ipdb.org/machine.cgi?gid=4918');
+INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Horse Saloon', '', 'Data East Pinball, Incorporated', '1991', 1, 'SS', 'Terpsichorean Entertainment', 'http://ipdb.org/machine.cgi?gid=4918');
 
 INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) values ('Wild Life', '', 'D. Gottlieb & Company', 'November, 1972', 2, 'EM', '', 'http://ipdb.org/machine.cgi?gid=2784');
 
