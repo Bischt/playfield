@@ -1,5 +1,5 @@
-drop table if exists player;
-create table player (
+drop table if exists players;
+create table players (
   player_id SERIAL primary key not null,
   nick varchar(255),
   name varchar(255),
