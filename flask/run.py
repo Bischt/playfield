@@ -1,6 +1,6 @@
 from flask_restful import Resource, Api
 from flask import Flask, jsonify
-U
+
 from playfield import machine
 from playfield import player
 from playfield import location
@@ -29,21 +29,50 @@ api.add_resource(location.DeleteLocation, '/api/v1/resources/location/delete_loc
 
 
 # Define general non API endpoints
+deployed_version = "v1"
+
+
 @app.route("/", methods=['GET'])
 def index():
-    general = [
+    info = [
         {
-            'status': 'OK',
-            'api_version': 'v1'
+            'live': check_live(),
+            'ready': check_ready(),
+            'api_version': deployed_version,
+            'app_name': 'Playfield',
+            'github': 'https://github.com/Bischt/playfield'
         }
     ]
 
-    return jsonify(general)
+    return jsonify(info)
+
+
+@app.route("/version", methods=['GET'])
+def version():
+    return jsonify({'api_version': deployed_version})
+
+
+@app.route("/ready", methods=['GET'])
+def ready():
+    return jsonify({'ready': check_ready()})
+
+
+@app.route("/live", methods=['GET'])
+def live():
+    return jsonify({'live': check_live()})
 
 
 @app.errorhandler(404)
 def page_not_found(e):
     return "<h1>404</h1><p>The resource could not be found.</p>", 404
+
+
+def check_live():
+    return "OK"
+
+
+def check_ready():
+    return "OK"
 
 
 if __name__ == "__main__":

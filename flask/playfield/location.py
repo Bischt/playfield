@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 import os
 import psycopg2
@@ -37,24 +37,47 @@ class LocationByName(Resource):
 class AddLocation(Resource):
 
     @staticmethod
-    def put():
+    def post():
+        name = request.form['name']
+        address = request.form['address']
+        address_private = request.form['address_private']
+        notes = request.form['notes']
+        loc_type = request.form['locType']
+        active = request.form['active']
 
-        return "PUT METHOD WORKS!"
+        query = "INSERT INTO location (name, address, address_private, notes, loc_type, active) VALUES (%s, %s, %s, " \
+                "%s, %s, %s); "
+        data = (name, address, address_private, notes, loc_type, active, )
+
+        entries = _write_db(query, data)
+        return jsonify(entries)
 
 
 class UpdateLocation(Resource):
 
     @staticmethod
     def post():
+        location_id = request.form['location_id']
+        name = request.form['name']
+        address = request.form['address']
+        address_private = request.form['address_private']
+        notes = request.form['notes']
+        loc_type = request.form['locType']
+        active = request.form['active']
 
-        return "POST METHOD WORKS!"
+        query = "UPDATE location SET name=%s, address=%s, address_private=%s, notes=%s, loc_type=%s, active=%s WHERE " \
+                "location_id=%s; "
+        data = (name, address, address_private, notes, loc_type, active, location_id, )
+
+        entries = _write_db(query, data)
+        return jsonify(entries)
 
 
 class DeleteLocation(Resource):
 
     @staticmethod
     def delete():
-        
+
         return "DELETE METHOD WORKS!"
 
 
@@ -62,6 +85,30 @@ def _read_db(query, data):
     """
     Fetch data from the db
     :param query:
+    :return:
+    """
+    # Create connection and cursor
+    connection = _connect_db()
+    dict_cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    # Run the query
+    if data is not None:
+        dict_cursor.execute(query, data)
+    else:
+        dict_cursor.execute(query)
+    # Get all results
+    entries = dict_cursor.fetchall()
+    # Clean up DB connection
+    dict_cursor.close()
+    connection.close()
+
+    return entries
+
+
+def _write_db(query, data):
+    """
+    Perform db modifications (create, update, delete)
+    :param query:
+    :param data:
     :return:
     """
     # Create connection and cursor
