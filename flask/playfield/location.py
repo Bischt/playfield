@@ -3,6 +3,17 @@ from flask_restful import Resource, Api
 import os
 import psycopg2
 import psycopg2.extras
+from .response import Response
+
+field_names = [
+    "location_id",
+    "name",
+    "address",
+    "addressPrivate",
+    "notes",
+    "locType",
+    "active"
+]
 
 
 class AllLocations(Resource):
@@ -11,7 +22,11 @@ class AllLocations(Resource):
     def get():
         query = "SELECT * FROM locations;"
         entries = _read_db(query, None)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class LocationById(Resource):

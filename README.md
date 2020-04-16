@@ -37,6 +37,43 @@ API
 | location | location_spec| **POST** /location/update_location                      | Update location details               |
 | location | location_id  | **DELETE** /location/delete_location                    | Delete location from database         |
 
+JSON Format:
+------------
+```
+{
+  "meta": 
+  {
+  	"apiVersion": "v1",
+	"request_timestamp": "now!"
+  },
+  "data": [
+    {
+      "machine_id": "1",
+      "name": "Tales of the Arabian Nights",
+      "abbr": "TOTAN",
+      "manufacturer": "Williams",
+      "manDate": "1996",
+      "players": "4",
+      "gameType": "SS",
+      "theme": "Lore",
+      "ipdbURL": "http://ipdb.org/machine.cgi?gid=3367"
+	},
+	{
+      "machine_id": "2",
+      "name": "Attack From Mars",
+      "abbr": "AFM",
+      "manufacturer": "Bally",
+      "manDate": "1998",
+      "players": "4",
+      "gameType": "SS",
+      "theme": "Aliens",
+      "ipdbURL": "http://ipdb.org/machine.cgi?gid=3788"
+	}
+  ]
+}
+```
+
+
 Data:
 -----
 1.  Machines:  Basic pinball machine data

@@ -3,6 +3,25 @@ from flask_restful import Resource, Api
 import os
 import psycopg2
 import psycopg2.extras
+from .response import Response
+
+field_names = [
+    "player_id",
+    "nick",
+    "name",
+    "email",
+    "phone",
+    "location",
+    "ifpanumber",
+    "pinside",
+    "notes",
+    "status",
+    "active",
+    "currentrank",
+    "currentwpprvalue",
+    "bestfinish",
+    "activeevents"
+]
 
 
 class AllPlayers(Resource):
@@ -11,7 +30,11 @@ class AllPlayers(Resource):
     def get():
         query = "SELECT * FROM players;"
         entries = _read_db(query, None)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class PlayerById(Resource):
