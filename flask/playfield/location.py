@@ -36,7 +36,11 @@ class LocationById(Resource):
         query = "SELECT * FROM locations WHERE location_id=%s;"
         data = (id, )
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class LocationByName(Resource):
@@ -46,7 +50,11 @@ class LocationByName(Resource):
         query = "SELECT * FROM locations WHERE name=%s;"
         data = (name, )
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class AddLocation(Resource):

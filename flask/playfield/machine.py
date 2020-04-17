@@ -38,7 +38,11 @@ class MachineById(Resource):
         query = "SELECT * FROM machines WHERE machine_id=%s"
         data = (id,)
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class MachineByName(Resource):
@@ -48,7 +52,11 @@ class MachineByName(Resource):
         query = "SELECT * FROM machines WHERE name=%s;"
         data = (name,)
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class MachineByAbbr(Resource):
@@ -58,7 +66,11 @@ class MachineByAbbr(Resource):
         query = "SELECT * FROM machines WHERE abbr=%s;"
         data = (abbr,)
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class MachineByManufacturer(Resource):
@@ -68,7 +80,11 @@ class MachineByManufacturer(Resource):
         query = "SELECT * FROM machines WHERE manufacturer=%s;"
         data = (manufacturer,)
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 def _read_db(query, data):

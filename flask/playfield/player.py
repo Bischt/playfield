@@ -44,7 +44,11 @@ class PlayerById(Resource):
         query = "SELECT * FROM players WHERE player_id=%s;"
         data = (id, )
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 class PlayerByName(Resource):
@@ -54,7 +58,11 @@ class PlayerByName(Resource):
         query = "SELECT * FROM players WHERE name=%s;"
         data = (name, )
         entries = _read_db(query, data)
-        return jsonify(entries)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
 
 
 def _read_db(query, data):
