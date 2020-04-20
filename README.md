@@ -36,6 +36,12 @@ API
 | location | location_spec| **PUT** /location/add_location                          | Add new location to database          |
 | location | location_spec| **POST** /location/update_location                      | Update location details               |
 | location | location_id  | **DELETE** /location/delete_location                    | Delete location from database         |
+| location | location_id  | **GET** /location/machines_on_location/<id>             | Show games at a particular location   |
+| location | location_id  | **POST** /location/add_machine_to_location              | Add game to a particular location     |
+| location |              | **POST** /location/update_machine_on_location           | Update game details for game at location |
+| location |              | **POST** /location/enable_machine_on_location           | Enable machine at location, eligible for play |
+| location |              | **POST** /location/disable_machine_on_location          | Disable machine at location, ineligible for play |
+| location |              | **DELETE** /location/delete_machine_on_location         | Remove machine from location          |
 
 JSON Format:
 ------------

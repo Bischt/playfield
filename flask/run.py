@@ -14,7 +14,8 @@ api.add_resource(machine.AllMachines, '/api/v1/resources/machine/all_machines')
 api.add_resource(machine.MachineById, '/api/v1/resources/machine/machine_by_id/<int:id>')
 api.add_resource(machine.MachineByName, '/api/v1/resources/machine/machine_by_name/<string:name>')
 api.add_resource(machine.MachineByAbbr, '/api/v1/resources/machine/machine_by_abbr/<string:abbr>')
-api.add_resource(machine.MachineByManufacturer, '/api/v1/resources/machine_by_manufacturer/<string:manufacturer>')
+api.add_resource(machine.MachineByManufacturer, '/api/v1/resources/machine/machine_by_manufacturer/<string'
+                                                ':manufacturer>')
 
 api.add_resource(player.AllPlayers, '/api/v1/resources/player/all_players')
 api.add_resource(player.PlayerById, '/api/v1/resources/player/player_by_id/<int:id>')

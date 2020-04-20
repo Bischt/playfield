@@ -32,7 +32,7 @@ class AllLocations(Resource):
 class LocationById(Resource):
 
     @staticmethod
-    def get(name):
+    def get(id):
         query = "SELECT * FROM locations WHERE location_id=%s;"
         data = (id, )
         entries = _read_db(query, data)
