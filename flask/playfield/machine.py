@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 import os
 import psycopg2
@@ -87,6 +87,27 @@ class MachineByManufacturer(Resource):
         return return_json
 
 
+class AddMachine(Resource):
+
+    @staticmethod
+    def post():
+        name = request.form['name']
+        abbr = request.form['abbr']
+        manufacturer = request.form['manufacturer']
+        manDate = request.form['manDate']
+        players = request.form['players']
+        gameType = request.form['gameType']
+        theme = request.form['theme']
+        ipdbURL = request.form['ipdbURL']
+
+        query = "INSERT INTO machines (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL) VALUES (" \
+                "%s, %s, %s, %s, %s, %s, %s, %s); "
+        data = (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL, )
+
+        _write_db(query, data)
+        return
+
+
 def _read_db(query, data):
     """
     Fetch data from the db
@@ -108,6 +129,30 @@ def _read_db(query, data):
     connection.close()
 
     return entries
+
+
+def _write_db(query, data):
+    """
+    Perform db modifications (create, update, delete)
+    :param query:
+    :param data:
+    :return:
+    """
+    # Create connection and cursor
+    connection = _connect_db()
+    dict_cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    # Run the query
+    if data is not None:
+        dict_cursor.execute(query, data)
+    else:
+        dict_cursor.execute(query)
+    # commit changes
+    connection.commit()
+    # Clean up DB connection
+    dict_cursor.close()
+    connection.close()
+
+    return
 
 
 def _connect_db():
