@@ -68,12 +68,12 @@ class AddLocation(Resource):
         loc_type = request.form['locType']
         active = request.form['active']
 
-        query = "INSERT INTO location (name, address, address_private, notes, loc_type, active) VALUES (%s, %s, %s, " \
+        query = "INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES (%s, %s, %s, " \
                 "%s, %s, %s); "
         data = (name, address, address_private, notes, loc_type, active, )
 
-        entries = _write_db(query, data)
-        return jsonify(entries)
+        _write_db(query, data)
+        return
 
 
 class UpdateLocation(Resource):
@@ -88,12 +88,12 @@ class UpdateLocation(Resource):
         loc_type = request.form['locType']
         active = request.form['active']
 
-        query = "UPDATE location SET name=%s, address=%s, address_private=%s, notes=%s, loc_type=%s, active=%s WHERE " \
+        query = "UPDATE locations SET name=%s, address=%s, addressPrivate=%s, notes=%s, locType=%s, active=%s WHERE " \
                 "location_id=%s; "
         data = (name, address, address_private, notes, loc_type, active, location_id, )
 
-        entries = _write_db(query, data)
-        return jsonify(entries)
+        _write_db(query, data)
+        return
 
 
 class DeleteLocation(Resource):
@@ -142,13 +142,13 @@ def _write_db(query, data):
         dict_cursor.execute(query, data)
     else:
         dict_cursor.execute(query)
-    # Get all results
-    entries = dict_cursor.fetchall()
+    # commit changes
+    connection.commit()
     # Clean up DB connection
     dict_cursor.close()
     connection.close()
 
-    return entries
+    return
 
 
 def _connect_db():
