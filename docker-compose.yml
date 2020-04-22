@@ -4,29 +4,29 @@ services:
 
   flask:
     build: ./flask
-    container_name: flask
+    container_name: playfield-flask
     restart: always
     depends_on:
       - db
     environment:
       - APP_NAME=app
-      - DB_HOST=postgres
+      - DB_HOST=playfield-postgres
       - DB_USER=postgres
       - DB_PASS=change_me
       - DB_NAME=playfield
     expose:
-      - 8080
+      - 8888
 
   nginx:
     build: ./nginx
-    container_name: nginx
+    container_name: playfield-nginx
     restart: always
     ports:
-      - "80:80"
+      - "8080:8080"
 
   db:
     build: ./postgres
-    container_name: postgres
+    container_name: playfield-postgres
     restart: always
     environment:
       POSTGRES_USER: postgres

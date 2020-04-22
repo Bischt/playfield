@@ -36,6 +36,20 @@ class AllPlayers(Resource):
         return return_json
 
 
+class ActivePlayers(Resource):
+
+    @staticmethod
+    def get():
+        query = "SELECT * FROM players WHERE active=True;"
+        db_query = Data()
+        entries = db_query.read_db(query, None)
+
+        resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
+
+
 class PlayerById(Resource):
 
     @staticmethod
