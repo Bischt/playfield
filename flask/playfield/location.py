@@ -1,9 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
-import os
-import psycopg2
-import psycopg2.extras
 from .response import Response
+from .data import Data
 
 field_names = [
     "location_id",
@@ -21,7 +19,8 @@ class AllLocations(Resource):
     @staticmethod
     def get():
         query = "SELECT * FROM locations;"
-        entries = _read_db(query, None)
+        db_query = Data()
+        entries = db_query.read_db(query, None)
 
         resp = Response(field_names, entries)
         return_json = resp.get_response_json()
@@ -35,7 +34,8 @@ class LocationById(Resource):
     def get(id):
         query = "SELECT * FROM locations WHERE location_id=%s;"
         data = (id, )
-        entries = _read_db(query, data)
+        db_query = Data()
+        entries = db_query.read_db(query, data)
 
         resp = Response(field_names, entries)
         return_json = resp.get_response_json()
@@ -49,7 +49,8 @@ class LocationByName(Resource):
     def get(name):
         query = "SELECT * FROM locations WHERE name=%s;"
         data = (name, )
-        entries = _read_db(query, data)
+        db_query = Data()
+        entries = db_query.read_db(query, data)
 
         resp = Response(field_names, entries)
         return_json = resp.get_response_json()
@@ -72,7 +73,8 @@ class AddLocation(Resource):
                 "%s, %s, %s); "
         data = (name, address, address_private, notes, loc_type, active, )
 
-        _write_db(query, data)
+        db_query = Data()
+        db_query.write_db(query, data)
         return
 
 
@@ -92,7 +94,8 @@ class UpdateLocation(Resource):
                 "location_id=%s; "
         data = (name, address, address_private, notes, loc_type, active, location_id, )
 
-        _write_db(query, data)
+        db_query = Data()
+        db_query.write_db(query, data)
         return
 
 
@@ -102,69 +105,3 @@ class DeleteLocation(Resource):
     def delete():
 
         return "DELETE METHOD WORKS!"
-
-
-def _read_db(query, data):
-    """
-    Fetch data from the db
-    :param query:
-    :return:
-    """
-    # Create connection and cursor
-    connection = _connect_db()
-    dict_cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    # Run the query
-    if data is not None:
-        dict_cursor.execute(query, data)
-    else:
-        dict_cursor.execute(query)
-    # Get all results
-    entries = dict_cursor.fetchall()
-    # Clean up DB connection
-    dict_cursor.close()
-    connection.close()
-
-    return entries
-
-
-def _write_db(query, data):
-    """
-    Perform db modifications (create, update, delete)
-    :param query:
-    :param data:
-    :return:
-    """
-    # Create connection and cursor
-    connection = _connect_db()
-    dict_cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    # Run the query
-    if data is not None:
-        dict_cursor.execute(query, data)
-    else:
-        dict_cursor.execute(query)
-    # commit changes
-    connection.commit()
-    # Clean up DB connection
-    dict_cursor.close()
-    connection.close()
-
-    return
-
-
-def _connect_db():
-    """
-    Establish db connection for read operations
-    :return:
-    """
-    try:
-        conn_string = "dbname=%s user=%s host=%s password=%s" % (os.environ['DB_NAME'],
-                                                                 os.environ['DB_USER'],
-                                                                 os.environ['DB_HOST'],
-                                                                 os.environ['DB_PASS'])
-
-        # Return DB connection handle
-        return psycopg2.connect(conn_string)
-
-    except psycopg2.Error as e:
-        print("I am unable to connect to the database: {}".format(e.pgerror))
-        exit(1)
