@@ -56,6 +56,15 @@ digraph models_diagram{
         <tr><td port="5" align="left">notes: text</td></tr>
         <tr><td port="6" align="left">active: boolean</td></tr>
     </table>>];
+  ifpa_cache [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">IFPA_Cache</td></tr>
+        <tr><td port="0" align="left"><i>player_id</i></td></tr>
+        <tr><td port="1" align="left">currentRank</td></tr>
+        <tr><td port="2" align="left">currentWPPRValue</td></tr>
+        <tr><td port="3" align="left">bestFinish</td></tr>
+        <tr><td port="4" align="left">activeEvents</td></tr>
+    </table>>];
   league [shape=none, margin=0, label=<
     <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
         <tr><td bgcolor="lightblue">League</td></tr>
@@ -123,6 +132,7 @@ digraph models_diagram{
   tournament:0 -> tournament_series:0;
   tournament:0 -> tournament_players:0;
   players:0 -> tournament_players:1;
+  players:0 -> ifpa_cache:0;
   season:2 -> tournament_series:1;
   match:0 ->match_players:0;
   match:1 -> tournament:0;

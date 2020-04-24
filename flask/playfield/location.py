@@ -18,7 +18,7 @@ class AllLocations(Resource):
 
     @staticmethod
     def get():
-        query = "SELECT * FROM locations;"
+        query = "SELECT * FROM locations ORDER BY active;"
         db_query = Data()
         entries = db_query.read_db(query, None)
 
@@ -66,7 +66,7 @@ class AddLocation(Resource):
         address = request.form['address']
         address_private = request.form['address_private']
         notes = request.form['notes']
-        loc_type = request.form['locType']
+        loc_type = request.form['loc_type']
         active = request.form['active']
 
         query = "INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES (%s, %s, %s, " \

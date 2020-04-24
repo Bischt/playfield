@@ -11,10 +11,10 @@ create table players (
   notes text,
   status integer,
   active boolean not null,
-  currentrank integer,
-  currentwpprvalue double precision,
-  bestfinish integer,
-  activeevents integer
+  currentrank integer default 0,
+  currentwpprvalue double precision default 0.0,
+  bestfinish integer default 0,
+  activeevents integer default 0
 );
 
 drop table if exists machines;
