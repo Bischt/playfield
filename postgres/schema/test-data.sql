@@ -21,6 +21,10 @@ INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VA
 INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES ('Giant Barcade', '435 Silverball Ln', false, '', 1, true);
 
 
+INSERT INTO locations_machines (location_id, machine_id, name, condition, notes, active) VALUES (1, 261, 'Attack From Mars Remake', 'OK', '', true);
+
+
+
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'John', 'john@someemail.com', '4564534566', 'San Jose, CA', '', '', '', 0, true, 0, 0.00, 0, 0);
 
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Peter', 'peter@someemail.com', '7654345677', 'Boston, MA', '', '', '', 0, true, 0, 0.00, 0, 0);

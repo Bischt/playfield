@@ -25,12 +25,15 @@ api.add_resource(player.PlayerByName, '/api/v1/resources/player/player_by_name/<
 api.add_resource(player.AddPlayer, '/api/v1/resources/player/add_player')
 
 api.add_resource(location.AllLocations, '/api/v1/resources/location/all_locations')
+api.add_resource(location.PlayableLocations, '/api/v1/resources/location/playable_locations')
 api.add_resource(location.LocationById, '/api/v1/resources/location/location_by_id/<int:id>')
 api.add_resource(location.LocationByName, '/api/v1/resources/location/location_by_name/<string:name>')
 api.add_resource(location.AddLocation, '/api/v1/resources/location/add_location')
 api.add_resource(location.UpdateLocation, '/api/v1/resources/location/update_location')
 api.add_resource(location.DeleteLocation, '/api/v1/resources/location/delete_location')
 
+api.add_resource(location.AllMachinesForLocation, '/api/v1/resources/location/all_machines_for_location/<int:id>')
+api.add_resource(location.ActiveMachinesForLocation, '/api/v1/resources/location/active_machines_for_location/<int:id>')
 
 # Define general non API endpoints
 deployed_version = "v1"

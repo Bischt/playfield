@@ -13,6 +13,31 @@ field_names = [
     "active"
 ]
 
+field_names_games = [
+    "location_id",
+    "name",
+    "address",
+    "addressPrivate",
+    "notes",
+    "locType",
+    "gamecount"
+]
+
+field_names_location_machines = [
+    "game_id",
+    "machine_id",
+    "condition",
+    "notes",
+    "name",
+    "abbr",
+    "manufacturer",
+    "manDate",
+    "players",
+    "gameType",
+    "theme",
+    "ipdbURL"
+]
+
 
 class AllLocations(Resource):
 
@@ -28,6 +53,23 @@ class AllLocations(Resource):
         return return_json
 
 
+class PlayableLocations(Resource):
+
+    @staticmethod
+    def get():
+        query = "SELECT locations.location_id, locations.name, locations.address, locations.addressPrivate, " \
+                "locations.notes, locations.locType, count(*) as gamecount FROM locations INNER JOIN " \
+                "locations_machines on locations.location_id=locations_machines.location_id WHERE " \
+                "locations.active=true AND locations_machines.active=true GROUP BY locations.location_id; "
+        db_query = Data()
+        entries = db_query.read_db(query, None)
+
+        resp = Response(field_names_games, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
+
+
 class LocationById(Resource):
 
     @staticmethod
@@ -38,6 +80,44 @@ class LocationById(Resource):
         entries = db_query.read_db(query, data)
 
         resp = Response(field_names, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
+
+
+class AllMachinesForLocation(Resource):
+
+    @staticmethod
+    def get(id):
+        query = "SELECT locations_machines.game_id, locations_machines.machine_id, locations_machines.condition, " \
+                "locations_machines.notes, machines.name, machines.abbr, machines.manufacturer, machines.manDate, " \
+                "machines.players, machines.gameType, machines.theme, machines.ipdbURL FROM locations_machines INNER " \
+                "JOIN machines on locations_machines.machine_id=machines.machine_id WHERE " \
+                "locations_machines.location_id=%s; "
+        data = (id, )
+        db_query = Data()
+        entries = db_query.read_db(query, data)
+
+        resp = Response(field_names_location_machines, entries)
+        return_json = resp.get_response_json()
+
+        return return_json
+
+
+class ActiveMachinesForLocation(Resource):
+
+    @staticmethod
+    def get(id):
+        query = "SELECT locations_machines.game_id, locations_machines.machine_id, locations_machines.condition, " \
+                "locations_machines.notes, machines.name, machines.abbr, machines.manufacturer, machines.manDate, " \
+                "machines.players, machines.gameType, machines.theme, machines.ipdbURL FROM locations_machines INNER " \
+                "JOIN machines on locations_machines.machine_id=machines.machine_id WHERE " \
+                "locations_machines.location_id=%s AND locations_machines.active=true; "
+        data = (id, )
+        db_query = Data()
+        entries = db_query.read_db(query, data)
+
+        resp = Response(field_names_location_machines, entries)
         return_json = resp.get_response_json()
 
         return return_json
