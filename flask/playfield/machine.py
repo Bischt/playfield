@@ -110,3 +110,17 @@ class AddMachine(Resource):
         db_query = Data()
         db_query.write_db(query, data)
         return
+
+
+class UpdateMachine(Resource):
+
+    @staticmethod
+    def post():
+        print("UPDATE MACHINE!")
+
+
+class DeleteMachine(Resource):
+
+    @staticmethod
+    def post():
+        print("DELETE MACHINE!")

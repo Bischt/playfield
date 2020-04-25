@@ -123,6 +123,39 @@ class ActiveMachinesForLocation(Resource):
         return return_json
 
 
+class AddGameToLocation(Resource):
+
+    @staticmethod
+    def post():
+        print("ADD GAME TO LOCATION!")
+
+
+class UpdateGameOnLocation(Resource):
+
+    @staticmethod
+    def post():
+        print("UPDATE GAME ON LOCATION!")
+
+
+class DeleteGameFromLocation(Resource):
+
+    @staticmethod
+    def delete():
+        print("DELETE GAME FROM LOCATION!")
+
+
+class SetGameActive(Resource):
+
+    @staticmethod
+    def get(game_id, active):
+        query = "UPDATE locations_machines SET active=%s WHERE game_id=%s;"
+        data = (active, game_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return
+
+
 class LocationByName(Resource):
 
     @staticmethod
@@ -185,3 +218,15 @@ class DeleteLocation(Resource):
     def delete():
 
         return "DELETE METHOD WORKS!"
+
+
+class SetLocationActive(Resource):
+
+    @staticmethod
+    def get(location_id, active):
+        query = "UPDATE locations SET active=%s WHERE location_id=%s;"
+        data = (active, location_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return

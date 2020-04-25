@@ -55,7 +55,7 @@ class PlayerById(Resource):
     @staticmethod
     def get(id):
         query = "SELECT * FROM players WHERE player_id=%s;"
-        data = (id, )
+        data = (id,)
         db_query = Data()
         entries = db_query.read_db(query, data)
 
@@ -70,7 +70,7 @@ class PlayerByName(Resource):
     @staticmethod
     def get(name):
         query = "SELECT * FROM players WHERE name=%s;"
-        data = (name, )
+        data = (name,)
         db_query = Data()
         entries = db_query.read_db(query, data)
 
@@ -97,8 +97,46 @@ class AddPlayer(Resource):
 
         query = "INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, " \
                 "active) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s); "
-        data = (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, )
+        data = (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active,)
 
         db_query = Data()
         db_query.write_db(query, data)
+        return
+
+
+class UpdatePlayer(Resource):
+
+    @staticmethod
+    def post():
+        print("UPDATE PLAYER!")
+
+
+class DeletePlayer(Resource):
+
+    @staticmethod
+    def post():
+        print("DELETE PLAYER!")
+
+
+class SetStatus(Resource):
+
+    @staticmethod
+    def get(player_id, status):
+        query = "UPDATE players SET status=%s WHERE player_id=%s;"
+        data = (status, player_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return
+
+
+class SetPlayerActive(Resource):
+
+    @staticmethod
+    def get(player_id, active):
+        query = "UPDATE players SET active=%s WHERE player_id=%s;"
+        data = (active, player_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+
         return
