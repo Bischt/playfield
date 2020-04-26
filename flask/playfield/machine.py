@@ -116,11 +116,33 @@ class UpdateMachine(Resource):
 
     @staticmethod
     def post():
-        print("UPDATE MACHINE!")
+        machine_id = request.form['machine_id']
+        name = request.form['name']
+        abbr = request.form['abbr']
+        manufacturer = request.form['manufacturer']
+        manDate = request.form['manDate']
+        players = request.form['players']
+        gameType = request.form['gameType']
+        theme = request.form['theme']
+        ipdbURL = request.form['ipdbURL']
+
+        query = "UPDATE machines SET name=%s, abbr=%s, manufacturer=%s, manDate=%s, players=%s, gameType=%s, " \
+                "theme=%s, ipdbURL=%s WHERE machine_id=%s "
+        data = (name, abbr, manufacturer, manDate, players, gameType, theme, ipdbURL, machine_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+        return
 
 
 class DeleteMachine(Resource):
 
     @staticmethod
-    def post():
-        print("DELETE MACHINE!")
+    def delete(machine_id):
+
+        query = "DELETE FROM machines WHERE machine_id=%s;"
+        data = (machine_id,)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return

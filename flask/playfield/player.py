@@ -108,14 +108,39 @@ class UpdatePlayer(Resource):
 
     @staticmethod
     def post():
-        print("UPDATE PLAYER!")
+        player_id = request.form['player_id']
+        name = request.form['name']
+        nick = request.form['nick']
+        email = request.form['email']
+        phone = request.form['phone']
+        location = request.form['location']
+        ifpanumber = request.form['ifpanumber']
+        pinside = request.form['pinside']
+        notes = request.form['notes']
+        status = request.form['status']
+        active = request.form['active']
+
+        query = "UPDATE players SET name=%s, nick=%s, email=%s, phone=%s, location=%s, ifpanumber=%s, pinside=%s, " \
+                "notes=%s, status=%s, active=%s WHERE player_id=%s; "
+        data = (name, nick, email, phone, location, ifpanumber, pinside, notes, status, active, player_id,)
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return
 
 
 class DeletePlayer(Resource):
 
     @staticmethod
-    def post():
-        print("DELETE PLAYER!")
+    def delete(player_id):
+
+        query = "DELETE FROM players WHERE player_id=%s;"
+        data = (player_id,)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return
 
 
 class SetStatus(Resource):

@@ -127,21 +127,55 @@ class AddGameToLocation(Resource):
 
     @staticmethod
     def post():
-        print("ADD GAME TO LOCATION!")
+        location_id = request.form['location_id']
+        machine_id = request.form['machine_id']
+        name = request.form['name']
+        condition = request.form['condition']
+        notes = request.form['notes']
+        active = request.form['active']
+
+        query = "INSERT INTO locations_machines (location_id, machine_id, name, condition, notes, active) VALUES (%s, " \
+                "%s, %s, %s, %s, %s); "
+        data = (location_id, machine_id, name, condition, notes, active,)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+        return
 
 
 class UpdateGameOnLocation(Resource):
 
     @staticmethod
     def post():
-        print("UPDATE GAME ON LOCATION!")
+        game_id = request.form['game_id']
+        location_id = request.form['location_id']
+        machine_id = request.form['machine_id']
+        name = request.form['name']
+        condition = request.form['condition']
+        notes = request.form['notes']
+        active = request.form['active']
+
+        query = "UPDATE locations_machines SET location_id=%s, machine_id=%s, name=%s, condition=%s, notes=%s, " \
+                "active=%s WHERE game_id=%s; "
+        data = (location_id, machine_id, name, condition, notes, active, game_id)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+        return
 
 
 class DeleteGameFromLocation(Resource):
 
     @staticmethod
-    def delete():
-        print("DELETE GAME FROM LOCATION!")
+    def delete(game_id):
+
+        query = "DELETE FROM locations_machines WHERE game_id=%s;"
+        data = (game_id,)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+
+        return
 
 
 class SetGameActive(Resource):
@@ -215,9 +249,14 @@ class UpdateLocation(Resource):
 class DeleteLocation(Resource):
 
     @staticmethod
-    def delete():
+    def delete(location_id):
 
-        return "DELETE METHOD WORKS!"
+        query = "DELETE FROM locations WHERE location_id=%s;"
+        data = (location_id,)
+
+        db_query = Data()
+        db_query.write_db(query, data)
+        return
 
 
 class SetLocationActive(Resource):
