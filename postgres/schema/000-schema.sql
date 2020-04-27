@@ -76,7 +76,11 @@ drop table if exists tournament;
 create table tournament (
   tournament_id SERIAL primary key not null,
   location_id integer,
-  name varchar(255)
+  name varchar(255),
+  tournament_datetime timestamp,
+  tournament_format integer,
+  tournament_seeding integer,
+  active boolean
 );
 
 drop table if exists tournament_players;
@@ -85,10 +89,20 @@ create table tournament_players (
   player_id integer not null
 );
 
+drop table if exists series_tournaments;
+create table series_tournaments (
+  series_id integer not null,
+  tournament_id integer not null
+);
+
 drop table if exists tournament_series;
 create table tournament_series (
   tournament_id integer not null,
-  series_id integer not null
+  series_id integer not null,
+  name varchar(255),
+  series_datetime timestamp,
+  series_format integer,
+  series_seeding integer
 );
 
 drop table if exists match;

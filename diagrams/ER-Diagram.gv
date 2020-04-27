@@ -83,18 +83,32 @@ digraph models_diagram{
         <tr><td port="0" align="left"><b>tournament_id: SERIAL</b></td></tr>
         <tr><td port="1" align="left"><i>location_id: integer</i></td></tr>
         <tr><td port="2" align="left">name: varchar(255)</td></tr>
+        <tr><td port="3" align="left">tournament_datetime: datetime</td></tr>
+        <tr><td port="4" align="left">tournament_format: integer</td></tr>
+        <tr><td port="5" align="left">tournament_seeding: integer</td></tr>
+        <tr><td port="6" align="left">active: boolean</td></tr>
     </table>>];
   tournament_series [shape=none, margin=0, label=<
     <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
         <tr><td bgcolor="lightblue">Tournament_Series</td></tr>
         <tr><td port="0" align="left"><i>tournament_id: integer</i></td></tr>
         <tr><td port="1" align="left"><i>series_id: integer</i></td></tr>
+        <tr><td port="2" align="left">name: varchar(255)</td></tr>
+        <tr><td port="3" align="left">series_datetime: timestamp</td></tr>
+        <tr><td port="4" align="left">series_format: integer</td></tr>
+        <tr><td port="5" align="left">series_seeding: integer</td></tr>
     </table>>];
   tournament_players [shape=none, margin=0, label=<
     <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
         <tr><td bgcolor="lightblue">Tournament_Players</td></tr>
         <tr><td port="0" align="left"><i>tournament_id: integer</i></td></tr>
         <tr><td port="1" align="left"><i>player_id: integer</i></td></tr>
+    </table>>];
+  series_tournaments [shape=none, margin=0, label=<
+    <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td bgcolor="lightblue">Series_Tournaments</td></tr>
+        <tr><td port="0" align="left">series_id</td></tr>
+        <tr><td port="1" align="left">tournament_id</td></tr>
     </table>>];
   season [shape=none, margin=0, label=<
     <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
@@ -129,7 +143,8 @@ digraph models_diagram{
   league:0 -> season:1;
   players:0 -> league_players:1;
   tournament:1 -> locations:0;
-  tournament:0 -> tournament_series:0;
+  series_tournaments:0 -> tournament_series:0;
+  tournament:0 -> series_tournaments:1;
   tournament:0 -> tournament_players:0;
   players:0 -> tournament_players:1;
   players:0 -> ifpa_cache:0;

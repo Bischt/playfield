@@ -4,6 +4,7 @@ from flask import Flask, jsonify
 from playfield import machine
 from playfield import player
 from playfield import location
+from playfield import tournament
 
 app = Flask(__name__)
 # Use Flask RESTful API
@@ -45,6 +46,21 @@ api.add_resource(location.AddGameToLocation, '/api/v1/resources/location/add_gam
 api.add_resource(location.UpdateGameOnLocation, '/api/v1/resources/location/update_game_on_location')
 api.add_resource(location.DeleteGameFromLocation, '/api/v1/resources/location/delete_game_from_location')
 api.add_resource(location.SetGameActive, '/api/v1/resources/location/set_game_active/<int:game_id><string:active>')
+
+api.add_resource(tournament.AllTournaments, '/api/v1/resources/tournaments/all_tournaments')
+api.add_resource(tournament.ActiveTournaments, '/api/v1/resources/tournaments/active_tournaments')
+api.add_resource(tournament.TournamentById, '/api/v1/resources/tournaments/tournament_by_id/<int:id>')
+api.add_resource(tournament.TournamentByName, '/api/v1/resources/tournaments/tournament_by_name/<string:name>')
+api.add_resource(tournament.TournamentByLocation, '/api/v1/resources/tournaments/tournament_by_location/<int:id>')
+api.add_resource(tournament.TournamentPlayers, '/api/v1/resources/tournaments/tournament_players/<int:id>')
+api.add_resource(tournament.AddTournament, '/api/v1/resources/tournaments/add_tournament')
+api.add_resource(tournament.UpdateTournament, '/api/v1/resources/tournaments/update_tournament')
+api.add_resource(tournament.DeleteTournament, '/api/v1/resources/tournaments/delete_tournament')
+api.add_resource(tournament.SetTournamentActive, '/api/v1/resources/tournaments/set_tournament_active/<int'
+                                                 ':tournament_id><string:active>')
+
+api.add_resource(tournament.AddTournamentPlayer, '/api/v1/resources/tournaments/add_tournament_player')
+api.add_resource(tournament.DeleteTournamentPlayer, '/api/v1/resources/tournaments/delete_tournament_player')
 
 # Define general non API endpoints
 deployed_version = "v1"
