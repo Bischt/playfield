@@ -14,7 +14,7 @@ class Response:
         tagged_data = self._add_db_field_names()
         return_json = self._build_json_response(tagged_data)
 
-        return json.dumps(return_json)
+        return json.dumps(return_json, default=str)
 
     def _build_json_response(self, tagged_data):
         """

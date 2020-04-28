@@ -44,3 +44,25 @@ INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, no
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Greg', 'greg@someemail.com', '4345654433', 'Nashville, TN', '', '', '', 0, true, 0, 0.00, 0, 0);
 
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Ann', 'ann@someemail.com', '', 'San Diego, CA', '', '', '', 0, true, 0, 0.00, 0, 0);
+
+
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test1', '2020-10-12T00:00:00.000', 0, 0, true);
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test2', '2020-04-09T00:00:00.000', 0, 0, true);
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test3', '2020-12-10T00:00:00.000', 0, 0, true);
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test4', '2020-11-23T00:00:00.000', 0, 0, true);
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test5', '2021-08-18T00:00:00.000', 0, 0, true);
+
+INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test6', '2021-02-22T00:00:00.000', 0, 0, true);
+
+
+
+INSERT INTO tournament_players (tournament_id, player_id) VALUES (1, 1);
+
+INSERT INTO tournament_players (tournament_id, player_id) VALUES (1, 2);
+
+INSERT INTO tournament_players (tournament_id, player_id) VALUES (1, 3);

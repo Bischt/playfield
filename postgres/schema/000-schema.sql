@@ -72,8 +72,8 @@ create table season (
   name varchar(255)
 );
 
-drop table if exists tournament;
-create table tournament (
+drop table if exists tournaments;
+create table tournaments (
   tournament_id SERIAL primary key not null,
   location_id integer,
   name varchar(255),
