@@ -269,3 +269,19 @@ class SetLocationActive(Resource):
         db_query.write_db(query, data)
 
         return
+
+
+class LocationCount(Resource):
+
+    @staticmethod
+    def get():
+        query = "SELECT count(*) FROM locations;"
+        data = (None,)
+
+        db_query = Data()
+        entries = db_query.read_db(query, data)
+
+        resp = Response(["count"], entries)
+        return_json = resp.get_response_json()
+
+        return return_json

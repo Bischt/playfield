@@ -146,3 +146,20 @@ class DeleteMachine(Resource):
         db_query.write_db(query, data)
 
         return
+
+
+class MachineCount(Resource):
+
+    @staticmethod
+    def get():
+
+        query = "SELECT count(*) FROM machines;"
+        data = (None,)
+
+        db_query = Data()
+        entries = db_query.read_db(query, data)
+
+        resp = Response(["count"], entries)
+        return_json = resp.get_response_json()
+
+        return return_json

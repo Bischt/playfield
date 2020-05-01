@@ -20,6 +20,7 @@ api.add_resource(machine.MachineByManufacturer, '/api/v1/resources/machine/machi
 api.add_resource(machine.AddMachine, '/api/v1/resources/machine/add_machine')
 api.add_resource(machine.UpdateMachine, '/api/v1/resources/machine/update_machine')
 api.add_resource(machine.DeleteMachine, '/api/v1/resources/machine/delete_machine')
+api.add_resource(machine.MachineCount, '/api/v1/resources/machine/machine_count')
 
 api.add_resource(player.AllPlayers, '/api/v1/resources/player/all_players')
 api.add_resource(player.ActivePlayers, '/api/v1/resources/player/active_players')
@@ -30,6 +31,7 @@ api.add_resource(player.UpdatePlayer, '/api/v1/resources/player/update_player')
 api.add_resource(player.DeletePlayer, '/api/v1/resources/player/delete_player')
 api.add_resource(player.SetStatus, '/api/v1/resources/player/set_status/<int:player_id>/<int:status>')
 api.add_resource(player.SetPlayerActive, '/api/v1/resources/player/set_active/<int:player_id>/<string:active>')
+api.add_resource(player.PlayerCount, '/api/v1/resources/player/player_count')
 
 api.add_resource(location.AllLocations, '/api/v1/resources/location/all_locations')
 api.add_resource(location.PlayableLocations, '/api/v1/resources/location/playable_locations')
@@ -39,6 +41,7 @@ api.add_resource(location.AddLocation, '/api/v1/resources/location/add_location'
 api.add_resource(location.UpdateLocation, '/api/v1/resources/location/update_location')
 api.add_resource(location.DeleteLocation, '/api/v1/resources/location/delete_location')
 api.add_resource(location.SetLocationActive, '/api/v1/resources/location/set_active/<int:location_id>/<string:active>')
+api.add_resource(location.LocationCount, '/api/v1/resources/location/location_count')
 
 api.add_resource(location.AllMachinesForLocation, '/api/v1/resources/location/all_machines_for_location/<int:id>')
 api.add_resource(location.ActiveMachinesForLocation, '/api/v1/resources/location/active_machines_for_location/<int:id>')
