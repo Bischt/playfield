@@ -20,7 +20,7 @@ class AllMachines(Resource):
 
     @staticmethod
     def get():
-        query = "SELECT * FROM machines LIMIT 10;"
+        query = "SELECT * FROM machines;"
         db_query = Data()
         entries = db_query.read_db(query, None)
 

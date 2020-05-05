@@ -1,6 +1,7 @@
 from flask_restful import Resource, Api
 from flask import Flask, jsonify
 
+from playfield import general
 from playfield import machine
 from playfield import player
 from playfield import location
@@ -64,6 +65,8 @@ api.add_resource(tournament.SetTournamentActive, '/api/v1/resources/tournaments/
 
 api.add_resource(tournament.AddTournamentPlayer, '/api/v1/resources/tournaments/add_tournament_player')
 api.add_resource(tournament.DeleteTournamentPlayer, '/api/v1/resources/tournaments/delete_tournament_player')
+
+api.add_resource(general.GetObjectCounts, '/api/v1/resources/general/get_object_counts')
 
 # Define general non API endpoints
 deployed_version = "v1"
