@@ -27,9 +27,9 @@ INSERT INTO locations_machines (location_id, machine_id, name, condition, notes,
 
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'John', 'john@someemail.com', '4564534566', 'San Jose, CA', '', '', '', 0, true, 0, 0.00, 0, 0);
 
-INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Peter', 'peter@someemail.com', '7654345677', 'Boston, MA', '', '', '', 0, true, 0, 0.00, 0, 0);
+INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Peter', 'peter@someemail.com', '7654345677', 'Boston, MA', '', '', '', 1, true, 0, 0.00, 0, 0);
 
-INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Amanda', 'amanda@someemail.com', '', 'Washington, DC', '', '', '', 0, true, 0, 0.00, 0, 0);
+INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Amanda', 'amanda@someemail.com', '', 'Washington, DC', '', '', '', 1, true, 0, 0.00, 0, 0);
 
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Mike', 'mike@someemail.com', '1232345432', 'Seattle, WA', '', '', '', 0, true, 0, 0.00, 0, 0);
 
@@ -39,12 +39,11 @@ INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, no
 
 INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Jane', 'jane@someemail.com', '3456787654', 'Boise, ID', '', '', '', 0, true, 0, 0.00, 0, 0);
 
-INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Daniel', 'daniel@someemail.com', '9786856754', 'Orlando, FL', '', '', '', 0, true, 0, 0.00, 0, 0);
+INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Daniel', 'daniel@someemail.com', '9786856754', 'Orlando, FL', '', '', '', 0, false, 0, 0.00, 0, 0);
 
-INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Greg', 'greg@someemail.com', '4345654433', 'Nashville, TN', '', '', '', 0, true, 0, 0.00, 0, 0);
+INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Greg', 'greg@someemail.com', '4345654433', 'Nashville, TN', '', '', '', 1, false, 0, 0.00, 0, 0);
 
-INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('', 'Ann', 'ann@someemail.com', '', 'San Diego, CA', '', '', '', 0, true, 0, 0.00, 0, 0);
-
+INSERT INTO players (nick, name, email, phone, location, ifpanumber, pinside, notes, status, active, currentrank, currentwpprvalue, bestfinish, activeevents) VALUES ('ANH', 'Ann', '', '4345654433', 'San Jose, CA', '', '', '', 1, true, 0, 0.00, 0, 0);
 
 
 INSERT INTO tournaments (location_id, name, tournament_datetime, tournament_format, tournament_seeding, active) VALUES (1, 'Test1', '2020-10-12T00:00:00.000', 0, 0, true);

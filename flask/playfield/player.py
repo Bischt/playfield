@@ -26,7 +26,7 @@ class AllPlayers(Resource):
 
     @staticmethod
     def get():
-        query = "SELECT * FROM players ORDER BY active;"
+        query = "SELECT * FROM players ORDER BY active DESC;"
         db_query = Data()
         entries = db_query.read_db(query, None)
 
