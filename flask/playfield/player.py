@@ -133,7 +133,6 @@ class DeletePlayer(Resource):
 
     @staticmethod
     def delete(player_id):
-
         query = "DELETE FROM players WHERE player_id=%s;"
         data = (player_id,)
 

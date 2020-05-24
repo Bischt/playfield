@@ -29,7 +29,7 @@ api.add_resource(player.PlayerById, '/api/v1/resources/player/player_by_id/<int:
 api.add_resource(player.PlayerByName, '/api/v1/resources/player/player_by_name/<string:name>')
 api.add_resource(player.AddPlayer, '/api/v1/resources/player/add_player')
 api.add_resource(player.UpdatePlayer, '/api/v1/resources/player/update_player')
-api.add_resource(player.DeletePlayer, '/api/v1/resources/player/delete_player')
+api.add_resource(player.DeletePlayer, '/api/v1/resources/player/delete_player/<int:player_id>')
 api.add_resource(player.SetStatus, '/api/v1/resources/player/set_status/<int:player_id>/<int:status>')
 api.add_resource(player.SetPlayerActive, '/api/v1/resources/player/set_active/<int:player_id>/<string:active>')
 api.add_resource(player.PlayerCount, '/api/v1/resources/player/player_count')
