@@ -232,7 +232,7 @@ class UpdateLocation(Resource):
         location_id = request.form['location_id']
         name = request.form['name']
         address = request.form['address']
-        address_private = request.form['address_private']
+        address_private = request.form['addressPrivate']
         notes = request.form['notes']
         loc_type = request.form['locType']
         active = request.form['active']

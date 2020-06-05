@@ -16,7 +16,7 @@ INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VA
 
 INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES ('Pinball Classic', '56 Standup Target Rd', false, '', 1, true);
 
-INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES ('Barcade', '5 Pop Bumper Ct', false, '', 1, true);
+INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES ('Barcade', '5 Pop Bumper Ct', false, '', 1, false);
 
 INSERT INTO locations (name, address, addressPrivate, notes, locType, active) VALUES ('Giant Barcade', '435 Silverball Ln', false, '', 1, true);
 
